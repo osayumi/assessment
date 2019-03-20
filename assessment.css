@@ -1,17 +1,19 @@
-body {
-    background-color: #04A6EB;
-    color: #FDFFFF;
-    width: 500px;
+body{
+    background-color: #103E50;
+    color: #6D92A0;
+    width: 500PX;
     margin-right: auto;
-    margin-left : auto;
+    margin-left: auto;
+    font-family: 'UD デジタル 教科書体 N-B';
 }
-button {
+button{
+    color: rgb(192, 211, 218);
     padding: 5px 20px;
-    background-color: #337AB7;
-    color: #FDFFFF;
-    border-color: #2E6DA4;
-    border-style: none;
+    background-color: #3989cf;
+    border-bottom-color: #6D92A0;
+    border-width: 5px;
 }
-input {
+input{
     height: 20px;
+    border-radius: 20px;
 }
