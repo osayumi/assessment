@@ -1,0 +1,24 @@
+body{
+  background-color:#00e095;
+  color:#ffffff;
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Nico Moji";
+}
+
+button {
+  padding: 5px 20px;
+  background-color: #337ab7;
+  border-style: none;
+  color: rgb(255, 255, 255);
+  font-family: "Nico Moji";
+}
+
+button:hover{
+  background-color: black;
+}
+
+input{
+  height: 26px;
+}
