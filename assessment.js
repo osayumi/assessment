@@ -4,11 +4,17 @@ const assessmentButton = document.getElementById('assessment');//診断するボ
 const resultDivided = document.getElementById('result-area');//診断結果を表示
 const tweetDivided = document.getElementById('tweet-area');//ツイート機能
 
-assessmentButton.onclick = () => {
-  const userName = userNameInput.value;
-  if (userName.length === 0) {
-    return;//名前が空の時は処理を終了する
-  }
+    userNameInput.onkeydown = (event) => {
+        if (event.key === 'Enter') {
+            assessmentButton.onclick();
+        }
+    };
+
+    assessmentButton.onclick = () => {
+        const userName = userNameInput.value;
+        if (userName.length === 0) { // 名前が空の時は処理を終了する
+            return;
+        }
 
   //診断結果を作成して
   //HTMLに表示する
