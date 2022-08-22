@@ -13,15 +13,27 @@ assessmentButton.onclick = () => {
   //診断結果を作成して
   //HTMLに表示する
   resultDivided.innerText = '';
-  const header = document.createElement('h3');
-  header.innerText = '診断結果';
-  resultDivided.appendChild(header);
+  const headerDiv = document.createElement('div');
+  headerDiv.setAttribute('class', 'card-header');
+  headerDiv.innerText = '診断結果';
+
+  // bodyDivided の作成
+  const bodyDivided = document.createElement('div');
+  bodyDivided.setAttribute('class', 'card-body');
 
   const paragraph = document.createElement('p');
-  //診断結果の文章を作成する
+  paragraph.setAttribute('class', 'card-text');
   const result = assessment(userName);
   paragraph.innerText = result;
-  resultDivided.appendChild(paragraph);
+  bodyDivided.appendChild(paragraph);
+
+  // resultDivided に Bootstrap のスタイルを適用する
+  resultDivided.setAttribute('class', 'card');
+  resultDivided.setAttribute('style', 'max-width: 700px;')
+
+  // headerDiv と bodyDivided を resultDivided に差し込む
+  resultDivided.appendChild(headerDiv);
+  resultDivided.appendChild(bodyDivided);
 
   //ツイートボタンを作成し、表示する
   tweetDivided.innerText = '';
@@ -31,7 +43,7 @@ assessmentButton.onclick = () => {
   anchor.setAttribute('data-text', result);
   anchor.innerText = 'Tweet #アンタのヨカトコ診断';
   tweetDivided.appendChild(anchor);
-  
+
   const script = document.createElement('script');
   script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
   tweetDivided.appendChild(script);
