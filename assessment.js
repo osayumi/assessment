@@ -4,11 +4,11 @@ const assessmentButton = document.getElementById('assessment');//診断するボ
 const resultDivided = document.getElementById('result-area');//診断結果を表示
 const tweetDivided = document.getElementById('tweet-area');//ツイート機能
 
-    userNameInput.onkeydown = (event) => {
-        if (event.key === 'Enter') {
-            assessmentButton.onclick();
-        }
-    };
+userNameInput.onkeydown = event => {
+  if (event.key === 'Enter') {
+    assessmentButton.onclick();
+  }
+};
 
     assessmentButton.onclick = () => {
         const userName = userNameInput.value;
